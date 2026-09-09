@@ -1,13 +1,14 @@
 # Sabina KC — Portfolio
 
-My personal portfolio website — built with [Next.js](https://nextjs.org/), TypeScript, and Tailwind CSS.
+Personal portfolio site of Sabina KC, Ph.D. researcher in Plant Breeding, Genetics & Genomics at the University of Georgia, working on microbial genomics, bioinformatics, and high-throughput sequencing. Built with [Next.js](https://nextjs.org/), TypeScript, and Tailwind CSS.
 
 🔗 **Live site:** _coming soon_
-🔗 **LinkedIn:** [linkedin.com/in/sabinakc5](https://www.linkedin.com/in/sabinakc5/)
+🔗 **LinkedIn:** [in/sabina-kc-89020b180](https://www.linkedin.com/in/sabina-kc-89020b180/)
+📧 **Email:** [sabina.kc@uga.edu](mailto:sabina.kc@uga.edu)
 
 ## About
 
-This repository contains the source code for my personal portfolio — an about-me page, project showcase, and contact information.
+This repository contains the source code for my personal portfolio — an about-me section, research highlights, and contact information.
 
 ## Tech Stack
 
@@ -60,5 +61,6 @@ This project is licensed under the [MIT License](LICENSE).
 
 ## Contact
 
-- LinkedIn: [sabinakc5](https://www.linkedin.com/in/sabinakc5/)
+- Email: [sabina.kc@uga.edu](mailto:sabina.kc@uga.edu)
+- LinkedIn: [in/sabina-kc-89020b180](https://www.linkedin.com/in/sabina-kc-89020b180/)
 - GitHub: [@sabina-kc](https://github.com/sabina-kc)

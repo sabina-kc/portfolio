@@ -14,7 +14,8 @@ const geistMono = Geist_Mono({
 
 export const metadata: Metadata = {
   title: "Sabina KC — Portfolio",
-  description: "Personal portfolio of Sabina KC.",
+  description:
+    "Portfolio of Sabina KC, Ph.D. researcher in Plant Breeding, Genetics & Genomics at the University of Georgia, working on microbial genomics and bioinformatics.",
 };
 
 export default function RootLayout({ children }: LayoutProps<"/">) {
