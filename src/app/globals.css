@@ -1,26 +1,145 @@
 @import "tailwindcss";
 
+/* Manual light/dark toggle driven by [data-theme] instead of prefers-color-scheme */
+@custom-variant dark (&:where([data-theme="dark"], [data-theme="dark"] *));
+
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --bg: #ffffff;
+  --bg-alt: #f6f7f5;
+  --bg-dark: #10130f;
+  --fg: #14170f;
+  --fg-muted: #52584c;
+  --border: rgba(20, 23, 15, 0.1);
+  --accent: #2f6f4f;
+  --accent-fg: #ffffff;
+  --gold: #b8902f;
+  --gold-fg: #14170f;
+}
+
+[data-theme="dark"] {
+  --bg: #0b0d0a;
+  --bg-alt: #14170f;
+  --bg-dark: #060705;
+  --fg: #f2f3ee;
+  --fg-muted: #a7ada0;
+  --border: rgba(242, 243, 238, 0.12);
+  --accent: #5fae82;
+  --accent-fg: #06120c;
+  --gold: #d9b25c;
+  --gold-fg: #14170f;
 }
 
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+  --color-background: var(--bg);
+  --color-foreground: var(--fg);
+  --font-sans: var(--font-inter);
+  --font-serif: var(--font-source-sans);
+  --font-mono: var(--font-jetbrains-mono);
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  background: var(--bg);
+  color: var(--fg);
+  font-family: var(--font-inter), Arial, Helvetica, sans-serif;
+}
+
+@layer components {
+  .container {
+    @apply mx-auto w-full max-w-5xl px-6 sm:px-10;
+  }
+
+  .section {
+    @apply py-16 sm:py-20;
+  }
+
+  .section-alt {
+    background: var(--bg-alt);
+  }
+
+  .section-dark {
+    background: var(--bg-dark);
+    color: #f2f3ee;
+  }
+
+  .section-header {
+    @apply mx-auto mb-10 flex max-w-2xl flex-col gap-3 text-center;
+  }
+
+  .section-header h2 {
+    @apply text-2xl font-semibold tracking-tight sm:text-3xl;
+  }
+
+  .section-header p {
+    color: var(--fg-muted);
+  }
+
+  .badge {
+    @apply inline-flex w-fit items-center gap-2 rounded-full px-4 py-1.5 text-xs font-medium tracking-wide uppercase;
+    font-family: var(--font-jetbrains-mono);
+    background: color-mix(in srgb, var(--accent) 12%, transparent);
+    color: var(--accent);
+  }
+
+  .card {
+    @apply flex flex-col gap-3 rounded-2xl border p-6 transition-colors;
+    border-color: var(--border);
+    background: var(--bg);
+  }
+
+  .card:hover {
+    border-color: color-mix(in srgb, var(--accent) 45%, var(--border));
+  }
+
+  .card-icon {
+    @apply flex size-11 items-center justify-center rounded-xl;
+    background: color-mix(in srgb, var(--accent) 14%, transparent);
+    color: var(--accent);
+  }
+
+  .card-link {
+    @apply text-sm font-medium;
+    color: var(--accent);
+  }
+
+  .grid-3 {
+    @apply grid gap-5 sm:grid-cols-2 lg:grid-cols-3;
+  }
+
+  .btn {
+    @apply inline-flex w-fit items-center justify-center gap-2 rounded-full px-5 py-2.5 text-sm font-medium transition-colors;
+  }
+
+  .btn-secondary {
+    border: 1px solid var(--border);
+    color: var(--fg);
+  }
+
+  .btn-secondary:hover {
+    border-color: color-mix(in srgb, var(--accent) 50%, var(--border));
+    color: var(--accent);
+  }
+
+  .btn-gold {
+    background: var(--gold);
+    color: var(--gold-fg);
+  }
+
+  .btn-gold:hover {
+    background: color-mix(in srgb, var(--gold) 85%, black);
+  }
+
+  .stat-number {
+    @apply text-3xl font-semibold sm:text-4xl;
+    font-family: var(--font-jetbrains-mono);
+    color: var(--accent);
+  }
+
+  .stat-number-gold {
+    color: var(--gold);
+  }
+
+  .stat-label {
+    @apply text-xs tracking-wide uppercase;
+    color: var(--fg-muted);
+  }
 }
