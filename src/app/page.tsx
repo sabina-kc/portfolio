@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 import {
   awards,
@@ -52,14 +53,19 @@ export default function Home() {
                 }}
               />
               <div
-                className="flex size-56 items-center justify-center rounded-full border-4 text-6xl font-semibold sm:size-72"
+                className="size-56 overflow-hidden rounded-full border-4 sm:size-72"
                 style={{
                   borderColor: "color-mix(in srgb, var(--accent) 40%, var(--border))",
-                  background: "var(--bg-alt)",
-                  color: "var(--accent)",
                 }}
               >
-                {site.initials}
+                <Image
+                  src="/images/sabina-headshot.jpg"
+                  alt={`${site.name} — ${site.role}`}
+                  width={288}
+                  height={288}
+                  priority
+                  className="size-full object-cover"
+                />
               </div>
             </div>
           </div>
