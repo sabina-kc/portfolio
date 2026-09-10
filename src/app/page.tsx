@@ -1,5 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
+import { withBasePath } from "@/lib/base-path";
 import {
   awards,
   featuredResearch,
@@ -59,7 +60,7 @@ export default function Home() {
                 }}
               >
                 <Image
-                  src="/images/sabina-headshot.jpg"
+                  src={withBasePath("/images/sabina-headshot.jpg")}
                   alt={`${site.name} — ${site.role}`}
                   width={288}
                   height={288}
