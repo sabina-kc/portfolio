@@ -51,7 +51,7 @@ export const featuredResearch = [
     org: "University of Georgia",
     description:
       "Characterizing strain diversity and host interactions of the beneficial endophyte Epichloë coenophiala, and assembling a draft reference genome.",
-    image: null,
+    image: "/images/tall-fescue-endophyte.jpg",
   },
   {
     id: "sugarbeet-microbiome",
@@ -79,7 +79,7 @@ export const experience = [
     org: "Institute of Plant Breeding, Genetics & Genomics, University of Georgia",
     period: "06/2026 – present",
     id: "uga-endophyte",
-    image: null,
+    image: "/images/tall-fescue-endophyte.jpg",
     bullets: [
       "Characterizing tall fescue endophyte (Epichloë coenophiala) strain diversity and host interactions",
       "Assembling a draft reference genome for beneficial E. coenophiala strains",
