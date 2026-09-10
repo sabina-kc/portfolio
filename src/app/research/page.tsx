@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import { experience } from "@/lib/data";
 
 export const metadata: Metadata = {
@@ -28,27 +29,40 @@ export default function ResearchPage() {
             <div
               key={job.id}
               id={job.id}
-              className="card scroll-mt-24"
+              className="card scroll-mt-24 sm:flex-row"
             >
-              <div className="flex flex-col justify-between gap-1 sm:flex-row sm:items-baseline">
-                <h3 className="font-medium">
-                  {job.role} · {job.org}
-                </h3>
-                <span
-                  className="shrink-0 text-sm"
+              {job.image && (
+                <div className="shrink-0 overflow-hidden rounded-xl sm:w-48">
+                  <Image
+                    src={job.image}
+                    alt={`${job.role} at ${job.org}`}
+                    width={240}
+                    height={240}
+                    className="h-40 w-full object-cover sm:h-full"
+                  />
+                </div>
+              )}
+              <div className="flex flex-1 flex-col gap-2">
+                <div className="flex flex-col justify-between gap-1 sm:flex-row sm:items-baseline">
+                  <h3 className="font-medium">
+                    {job.role} · {job.org}
+                  </h3>
+                  <span
+                    className="shrink-0 text-sm"
+                    style={{ color: "var(--fg-muted)" }}
+                  >
+                    {job.period}
+                  </span>
+                </div>
+                <ul
+                  className="list-disc space-y-1 pl-5 text-sm"
                   style={{ color: "var(--fg-muted)" }}
                 >
-                  {job.period}
-                </span>
+                  {job.bullets.map((bullet) => (
+                    <li key={bullet}>{bullet}</li>
+                  ))}
+                </ul>
               </div>
-              <ul
-                className="list-disc space-y-1 pl-5 text-sm"
-                style={{ color: "var(--fg-muted)" }}
-              >
-                {job.bullets.map((bullet) => (
-                  <li key={bullet}>{bullet}</li>
-                ))}
-              </ul>
             </div>
           ))}
         </div>

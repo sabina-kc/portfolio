@@ -123,6 +123,17 @@ export default function Home() {
           <div className="grid-3">
             {featuredResearch.map((project) => (
               <div key={project.id} className="card">
+                {project.image && (
+                  <div className="-mx-6 -mt-6 mb-1 overflow-hidden rounded-t-2xl">
+                    <Image
+                      src={project.image}
+                      alt={project.title}
+                      width={400}
+                      height={240}
+                      className="h-40 w-full object-cover"
+                    />
+                  </div>
+                )}
                 <span className="badge w-fit">{project.badge}</span>
                 <h4 className="font-medium">{project.title}</h4>
                 <p className="text-xs" style={{ color: "var(--fg-muted)" }}>

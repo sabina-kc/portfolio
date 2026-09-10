@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import { certifications, education, skills } from "@/lib/data";
 
 export const metadata: Metadata = {
@@ -38,14 +39,27 @@ export default function AboutPage() {
             {education.map((item) => (
               <div
                 key={item.degree}
-                className="flex flex-col justify-between gap-1 border-b pb-4 last:border-0 last:pb-0 sm:flex-row sm:items-baseline"
+                className="flex flex-col gap-4 border-b pb-4 last:border-0 last:pb-0 sm:flex-row sm:items-center sm:justify-between"
                 style={{ borderColor: "var(--border)" }}
               >
-                <div>
-                  <p className="font-medium">{item.degree}</p>
-                  <p className="text-sm" style={{ color: "var(--fg-muted)" }}>
-                    {item.org}
-                  </p>
+                <div className="flex items-center gap-4">
+                  {item.image && (
+                    <div className="size-16 shrink-0 overflow-hidden rounded-xl">
+                      <Image
+                        src={item.image}
+                        alt={item.degree}
+                        width={64}
+                        height={64}
+                        className="size-full object-cover"
+                      />
+                    </div>
+                  )}
+                  <div>
+                    <p className="font-medium">{item.degree}</p>
+                    <p className="text-sm" style={{ color: "var(--fg-muted)" }}>
+                      {item.org}
+                    </p>
+                  </div>
                 </div>
                 <span
                   className="shrink-0 text-sm"

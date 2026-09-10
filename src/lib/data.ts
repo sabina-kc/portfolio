@@ -51,6 +51,7 @@ export const featuredResearch = [
     org: "University of Georgia",
     description:
       "Characterizing strain diversity and host interactions of the beneficial endophyte Epichloë coenophiala, and assembling a draft reference genome.",
+    image: null,
   },
   {
     id: "sugarbeet-microbiome",
@@ -59,6 +60,7 @@ export const featuredResearch = [
     org: "USDA-ARS / North Dakota State University",
     description:
       "Profiled fungal and bacterial microbiomes of raw diffusion sugarbeet juice via Oxford Nanopore sequencing to identify contaminants and develop management approaches.",
+    image: "/images/sugarbeet-harvesting.jpg",
   },
   {
     id: "corteva",
@@ -67,6 +69,7 @@ export const featuredResearch = [
     org: "Corteva AgriScience",
     description:
       "Optimized and validated high-throughput qPCR/ddPCR assays and molecular marker tools to support crop-health and trait-improvement projects.",
+    image: "/images/corteva.jpg",
   },
 ];
 
@@ -76,6 +79,7 @@ export const experience = [
     org: "Institute of Plant Breeding, Genetics & Genomics, University of Georgia",
     period: "06/2026 – present",
     id: "uga-endophyte",
+    image: null,
     bullets: [
       "Characterizing tall fescue endophyte (Epichloë coenophiala) strain diversity and host interactions",
       "Assembling a draft reference genome for beneficial E. coenophiala strains",
@@ -90,6 +94,7 @@ export const experience = [
     org: "USDA ARS Sugarbeet Research Unit & North Dakota State University",
     period: "01/2024 – 05/2026",
     id: "sugarbeet-microbiome",
+    image: "/images/sugarbeet-harvesting.jpg",
     bullets: [
       "Investigated fungal and bacterial microbiomes in raw diffusion sugarbeet juice via Oxford Nanopore sequencing and developed detection and management approaches for sugar processing streams",
       "Proficient in wet-lab and molecular biology tools: DNA/RNA extraction, PCR, qPCR, gel electrophoresis, ELISA, HPLC sugar quantification, and NGS quality control",
@@ -104,6 +109,7 @@ export const experience = [
     org: "Corteva AgriScience",
     period: "05/2025 – 08/2025",
     id: "corteva",
+    image: "/images/corteva.jpg",
     bullets: [
       "Optimized protocols for nucleic acid extraction and assay detection to support crop-health projects",
       "Developed molecular detection assays (qPCR, ddPCR) to detect biological targets",
@@ -116,6 +122,7 @@ export const experience = [
     org: "Nepal Agriculture Research Council",
     period: "07/2023 – 11/2023",
     id: "narc",
+    image: null,
     bullets: [
       "Performed phenotypic data collection and analysis for a Coordinated Varietal Trial evaluating 30 hybrid maize genotypes",
       "Supported a Coordinated Farmers Field Trial of 8 maize genotypes at Khumaltar, Lalitpur",
@@ -127,6 +134,7 @@ export const experience = [
     org: "Quest for Development Initiatives",
     period: "01/2023 – 06/2023",
     id: "quest",
+    image: null,
     bullets: [
       "Led sustainable farming training programs and coordinated stakeholders to implement agricultural innovations",
       "Contributed to a solar-powered cold storage feasibility study and a nutrition-sensitive food production project",
@@ -137,6 +145,7 @@ export const experience = [
     org: "Tribhuvan University",
     period: "2021 – 2022",
     id: "tu",
+    image: null,
     bullets: [
       "Designed randomized field trials evaluating split potassium application effects on chili (Capsicum annuum L.) yield",
       "Managed field operations and participated in an Integrated Pest Management program",
@@ -149,16 +158,19 @@ export const education = [
     degree: "Ph.D., Plant Breeding, Genetics & Genomics",
     org: "University of Georgia",
     period: "06/2026 – present",
+    image: null as string | null,
   },
   {
     degree: "M.S., Plant Pathology, Microbiology & Biotechnology",
     org: "North Dakota State University — GPA 3.85/4.0",
     period: "01/2024 – 05/2026",
+    image: "/images/defense-ms.jpg",
   },
   {
     degree: "B.S., Agriculture",
     org: "Tribhuvan University — GPA 4.0/4.0",
     period: "2018 – 2022",
+    image: "/images/bachelor-defense.jpg",
   },
 ];
 
@@ -250,6 +262,25 @@ export const oralPresentations = [
   "Microbial Contaminants in raw Sugarbeet juice: A microbiome-driven analysis, 55th Annual Sugarbeet Research Reporting Session, 14th January 2025.",
   "Profiling of fungal contaminants in Sugarbeet factory processing and their targeted management approaches, 56th Annual Sugarbeet Research Reporting Session, 13th January 2026.",
   "From microbiome to mitigation: Characterization of fungal contaminants and assessment of their photocatalytic growth inhibition in sugarbeet processing. Department of Plant Pathology, Microbiology and Biotechnology, NDSU, 8th April 2026.",
+];
+
+export const presentationPhotos = [
+  {
+    src: "/images/oral-presentation-sugarbeet-processing.jpg",
+    caption: "Presenting on sugarbeet processing, NDSU Research Day",
+  },
+  {
+    src: "/images/oral-presentation-reporting-session.jpg",
+    caption: "Annual Sugarbeet Research Reporting Session",
+  },
+  {
+    src: "/images/corteva-delta-symposium.jpg",
+    caption: "Poster presentation, Corteva DELTA Symposium 2024",
+  },
+  {
+    src: "/images/aps-north-central-poster.jpg",
+    caption: "Poster presentation, APS North Central Division 2024",
+  },
 ];
 
 export const posterPresentations = [

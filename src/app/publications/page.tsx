@@ -1,7 +1,9 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import {
   oralPresentations,
   posterPresentations,
+  presentationPhotos,
   publications,
 } from "@/lib/data";
 
@@ -77,6 +79,31 @@ export default function PublicationsPage() {
             </li>
           ))}
         </ol>
+
+        <h2 className="mt-10 text-xl font-semibold tracking-tight">
+          Conference Highlights
+        </h2>
+        <div className="grid gap-4 sm:grid-cols-2">
+          {presentationPhotos.map((photo) => (
+            <figure key={photo.src} className="card p-0">
+              <div className="overflow-hidden rounded-2xl">
+                <Image
+                  src={photo.src}
+                  alt={photo.caption}
+                  width={400}
+                  height={280}
+                  className="h-56 w-full object-cover"
+                />
+              </div>
+              <figcaption
+                className="px-5 py-4 text-sm"
+                style={{ color: "var(--fg-muted)" }}
+              >
+                {photo.caption}
+              </figcaption>
+            </figure>
+          ))}
+        </div>
       </div>
     </section>
   );
